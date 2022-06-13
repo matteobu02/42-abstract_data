@@ -6,11 +6,13 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:40:02 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/13 14:55:32 by mbucci           ###   ########.fr       */
+/*   Updated: 2022/06/14 01:36:32 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#include <stdexcept>
 
 namespace ft
 {
@@ -162,7 +164,7 @@ namespace ft
 				for (size_type i = 0; i < this->_size; i++)
 				{
 					this->_alloc.construct(NewAlloc++, tmp[i]);
-					this->_alloc.destroy(tmp[i])
+					this->_alloc.destroy(tmp[i]);
 				}
 				this->_alloc.deallocate(this->_arr, this->_cap);
 				this->_cap = NewCap;
