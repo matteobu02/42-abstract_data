@@ -6,7 +6,7 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:17:16 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/09 17:41:28 by mbucci           ###   ########.fr       */
+/*   Updated: 2022/06/14 12:56:10 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int	main()
 {
-	std::vector<int>	v(-1);
 	ft::vector<int>		ft_v;
+	std::vector<int>	std_v;
 
-	(void)v;
 	(void)ft_v;
+	(void)std_v;
 	return (0);
 }

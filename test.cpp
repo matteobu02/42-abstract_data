@@ -15,13 +15,8 @@ void	print_vect(std::vector<int> const &vect)
 
 int	main()
 {
-	std::vector<int>	myvector;
-	std::string			tmp[5] = {"","", "", "", ""};
+	std::vector<int>	myvector(-1);
 
-	std::cout << tmp[-1] << std::endl;
-	for (size_t i=1;i<10;i++) myvector.push_back(i);
-	std::cout << &myvector << std::endl;
-	std::cout << myvector.at(-100) << std::endl;
-
+	std::cout << myvector.capacity() << std::endl;
 	return (0);
 }
