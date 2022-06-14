@@ -6,7 +6,7 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:40:02 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/14 12:56:15 by mbucci           ###   ########.fr       */
+/*   Updated: 2022/06/14 15:34:53 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,42 +29,38 @@ namespace ft
 			typedef size_t										size_type;
 
 			// Constructors
-			explicit vector (const allocator_type& alloc = allocator_type())
-				: _alloc(alloc)
+			explicit vector (const allocator_type& alloc = allocator_type()) : _alloc(alloc)
 			{
 			}
 
 			explicit vector (size_type n, const value_type& val = value_type(),
-				const allocator_type& alloc = allocator_type()) : _alloc(alloc), _size(n)
+				const allocator_type& alloc = allocator_type()) : _alloc(alloc), _size(n), _cap(n)
 			{
 				if (n < 0)
 					throw (std::length_error("vector"));
 				else
 				{
+					pointer	tmp;
 
-					while (this->_cap < n)
-						this->_cap *= 2;
-					this->_arr = this->_alloc.allocate(this->_cap);
-					pointer tmp = &this->_arr[0];
-					for (size_type i = 0; i < this->_size; i++)
+					this->_arr = this->_alloc.allocate(n);
+					tmp = this->_arr;
+					for (size_type i = 0; i < n; i++)
 						this->_alloc.construct(tmp++, val);
 				}
 				return ;
 			}
 			
-			/*template <class InputIterator>
+			template <class InputIterator>
 			vector (InputIterator first, InputIterator last,
-				const allocator_type& alloc = allocator_type()) : _alloc(alloc)
-			{
-				//for ()
-			}*/
+				const allocator_type& alloc = allocator_type());
+
 
 			vector (const vector& x) : _alloc(x._alloc), _size(x._size), _cap(x._cap)
 			{
 				pointer	tmp;
 
 				this->_arr = this->_alloc.allocate(this->_cap);
-				tmp = this->*_arr;
+				tmp = this->_arr;
 				for (size_type i = 0; i < this->_size; i++)
 					this->_alloc.construct(tmp++, x[i]);
 				return ;
@@ -73,8 +69,8 @@ namespace ft
 			// Destructor
 			~vector()
 			{
-				for (pointer ptr = &this->_arr[0]; this->_size > 0; --this->_size, ptr++)
-					this->_alloc.destroy(ptr);
+				for (pointer ptr = this->_arr; this->_size > 0; this->_size--)
+					this->_alloc.destroy(ptr++);
 				this->_alloc.deallocate(this->_arr, this->_cap);
 				return ;
 			}
@@ -82,18 +78,21 @@ namespace ft
 			// Copy assignment operator
 			vector&	operator= (const vector& x)
 			{
-				if (&x == this)
-					return (*this);
-				for (pointer ptr = &this->_arr[0]; this->_size > 0; --this->_size)
-					this->_alloc.destroy(ptr++);
-				this->_alloc.deallocate(this->_arr, this->_cap);
-				this->_size = x._size;
-				this->_cap = x._cap;
-				this->_alloc = x._alloc;
-				this->_arr = this->_alloc.allocate(this->_cap);
-				pointer	tmp = this->*_arr;
-				for (size_type i = 0; i < this->_size; i++)
-					this->_alloc.construct(tmp++, x[i]);
+				if (&x != this)
+				{
+					pointer	tmp;
+
+					if (x._size > this->_size)
+						reallocate(x._size);
+					tmp = this->_arr;
+					for (size_type i = 0; i < this->_size; i++)
+						this->_alloc.destroy(tmp++);
+					this->_size = x._size;
+					this->_cap = x._cap;
+					tmp = this->_arr;
+					for (size_type i = 0; i < this->_size; i++)
+						this->_alloc.construct(tmp++, x[i]);
+				}
 				return (*this);
 			}
 
@@ -103,23 +102,29 @@ namespace ft
 			size_type	capacity() const	{ return (this->_cap); }
 			bool		empty() const		{ return (!this->_size); }
 
-			/*void	resize (size_type n, value_type val = value_type())
-			{
-				if (n == this->_size)
-					return ;
-				else if (n < this->_size)
-				{
-					size_type	i;
+			/* if n < size --> cap = cap      */
+			/* if n <= size * 2 --> size *= 2 */
+			/* else --> size = n              */
 
-					
-				}
-			}*/
-
-			/*void	reserve (size_type n)
+			void	resize (size_type n, value_type val = value_type())
 			{
 				if (n > this->_cap)
-					
-			}*/
+				{
+					pointer	tmp;
+
+					reallocate(n);
+					tmp = this->_arr + this->size;
+					for (size_type i = this->size; i < n; i++)
+						this->_alloc.construct(tmp++, val);
+					this->_size = n;
+				}
+				else if (n < this->_size)
+				{
+					;
+				}
+			}
+
+			void	reserve (size_type n);
 
 			// ELEMENT ACCESS
 			reference		operator[] (size_type n)		{ return (this->_arr[n]); }
@@ -146,15 +151,10 @@ namespace ft
 
 			// MODIFIERS
 			template <class InputIterator>
-				void	assign (InputIterator first, InputIterator last);
-
+			void	assign (InputIterator first, InputIterator last);
 			void	assign (size_type n, const value_type& val);
+			void	push_back (const value_type& val);
 
-			/*void	push_back (const value_type& val)
-			{
-				if (this->_size + 1 > this->_cap)
-					// reallocate
-			}*/
 
 		protected:
 			allocator_type	_alloc;
@@ -168,10 +168,10 @@ namespace ft
 				pointer		newAlloc;
 				pointer		tmp;
 
-				newCap = this->_cap;
 				tmp = this->_arr;
-				while (newCap < n)
-					newCap *= 2;
+				newCap = this->_cap * 2;
+				if (newCap < n)
+					newCap = n;
 				newAlloc = _alloc.allocate(newCap);
 				for (size_type i = 0; i < this->_size; i++)
 				{
