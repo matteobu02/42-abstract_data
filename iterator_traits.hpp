@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.hpp                                          :+:      :+:    :+:   */
+/*   iterator_traits.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/09 13:23:35 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/24 16:00:54 by mbucci           ###   ########.fr       */
+/*   Created: 2022/06/24 15:11:39 by mbucci            #+#    #+#             */
+/*   Updated: 2022/06/24 16:02:23 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 namespace ft
 {
-	template <class T, class Container = deque<T> > class stack
+	template <class Iterator> class iterator_traits
 	{
-		public:
-			typedef T			value_type;
-			typedef Container	container_type;
-			typedef size_t		size_type;
+	};
 
-			explicit stack (const container_type& ctnr = container_type())
-			{
+	template <class T> class iterator_traits<T*>
+	{
+	};
 
-			}
-
-		private:
+	template <class T> class iterator_traits<const T*>
+	{
 	};
 }
