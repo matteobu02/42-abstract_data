@@ -6,7 +6,7 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:40:02 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/24 16:26:45 by mbucci           ###   ########.fr       */
+/*   Updated: 2022/06/27 16:55:01 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 #include <stdexcept>
 #include <limits>
 #include <iostream>
+#include "random_access_iterator.hpp"
 #include "reverse_iterator.hpp"
+#include "lexicographical_compare.hpp"
 
 namespace ft
 {
@@ -34,7 +36,6 @@ namespace ft
 			typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;
 			typedef size_t														size_type;
 
-			// Constructors
 			explicit vector (const allocator_type& alloc = allocator_type()) : _alloc(alloc)
 			{
 			}
@@ -68,7 +69,6 @@ namespace ft
 				return ;
 			}
 
-			// Destructor
 			~vector()
 			{
 				for (pointer ptr = this->_arr; this->_size > 0; this->_size--)
@@ -77,7 +77,6 @@ namespace ft
 				return ;
 			}
 
-			// Copy assignment operator
 			vector&	operator= (const vector& x)
 			{
 				if (&x != this)
@@ -158,17 +157,17 @@ namespace ft
 				return (this->_arr[n]);
 			}
 
-			reference		front()			{ return (this->_arr[0]); }
-			const_reference	front() const	{ return (this->_arr[0]); }
-			reference		back()			{ return (this->_arr[this->_size - 1]); }
-			const_reference	back() const	{ return (this->_arr[this->_size - 1]); }
+			reference front()				{ return (this->_arr[0]); }
+			const_reference front() const	{ return (this->_arr[0]); }
+			reference back()				{ return (this->_arr[this->_size - 1]); }
+			const_reference back() const	{ return (this->_arr[this->_size - 1]); }
 
 			// MODIFIERS
 			template <class InputIterator>
-			void	assign (InputIterator first, InputIterator last);
-			void	assign (size_type n, const value_type& val);
+			void assign (InputIterator first, InputIterator last);
+			void assign (size_type n, const value_type& val);
 			
-			void	push_back (const value_type& val)
+			void push_back (const value_type& val)
 			{
 				if (this->_cap == this->_size)
 				{
@@ -179,7 +178,7 @@ namespace ft
 				return ;
 			}
 
-			void	pop_back()
+			void pop_back()
 			{
 				if (!this->empty())
 					this->_alloc.destroy(this->_arr + this->_size--);
@@ -196,28 +195,33 @@ namespace ft
 
 			void	swap (vector& x);
 
-			void	clear();
+			void	clear()
+			{
+				if (!this->empty())
+				{
+					for (size_type i = 0; i < this->_size; i++)
+						this->_alloc.destroy(this->_arr + i);
+					this->_size = 0;
+				}
+				return ;
+			}
 
-			// Allocator
-			allocator_type	get_allocator() const { return (this->_alloc); }
+			// ALLOCATOR
+			allocator_type get_allocator() const { return (this->_alloc); }
 
-		protected:
+		private:
 			allocator_type	_alloc;
 			pointer			_arr;
 			size_type		_size;
 			size_type		_cap;
 
-			void	reallocate(size_type n)
+			void reallocate(size_type n)
 			{
-				pointer		newAlloc;
-				pointer		tmp;
-
-				tmp = this->_arr;
-				newAlloc = this->_alloc.allocate(n);
+				pointer newAlloc = this->_alloc.allocate(n);
 				for (size_type i = 0; i < this->_size; i++)
 				{
 					this->_alloc.construct(newAlloc++, this->_arr[i]);
-					this->_alloc.destroy(tmp + i);
+					this->_alloc.destroy(this->_arr + i);
 				}
 				this->_alloc.deallocate(this->_arr, this->_cap);
 				this->_cap = n;
@@ -226,22 +230,55 @@ namespace ft
 				return ;
 			}
 	};
+
 	// Non-member function overloads
 	template <class T, class Alloc>
-		bool operator== (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
-	template <class T, class Alloc>
-		bool operator!= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
-	template <class T, class Alloc>
-		bool operator< (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
-	template <class T, class Alloc>
-		bool operator<= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
-	template <class T, class Alloc>
-		bool operator> (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
-	template <class T, class Alloc>
-		bool operator>= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
+		bool operator== (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			if (lhs.size() == rhs.size())
+			{
+				for (size_t i = 0; i < lhs.size(); i++)
+					if (lhs[i] != rhs[i])
+						return (false);
+				return (true);
+			}
+			return (false);
+		}
 
 	template <class T, class Alloc>
-		void swap (vector<T,Alloc>& x, vector<T,Alloc>& y);
+		bool operator!= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			return (!(lhs == rhs));
+		}
+
+	template <class T, class Alloc>
+		bool operator< (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			return (ft::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end()));
+		}
+
+	template <class T, class Alloc>
+		bool operator<= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			return (!(rhs < rhs));
+		}
+
+	template <class T, class Alloc>
+		bool operator> (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			return (rhs < lhs);
+		}
+
+	template <class T, class Alloc>
+		bool operator>= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
+		{
+			return (!(lhs < rhs));
+		}
+
+	template <class T, class Alloc>
+		void swap (vector<T,Alloc>& x, vector<T,Alloc>& y)
+		{
+			x.swap(y);
+			return ;
+		}
 }
-
-
