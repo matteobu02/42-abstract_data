@@ -13,7 +13,7 @@
 #pragma once
 
 #include <stdexcept>
-#include <iostream>
+#include <algorithm>
 #include "iterators.hpp"
 #include "lexicographical_compare.hpp"
 
@@ -30,8 +30,8 @@ namespace ft
 			typedef typename allocator_type::const_pointer						const_pointer;
 			typedef typename ft::random_access_iterator<value_type>				iterator;
 			typedef typename ft::random_access_iterator<const value_type>		const_iterator;
-			//typedef typename ft::reverse_iterator<iterator>						reverse_iterator;
-			//typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;
+			typedef typename ft::reverse_iterator<iterator>						reverse_iterator;
+			typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;
 			typedef size_t														size_type;
 
 			explicit vector (const allocator_type& alloc = allocator_type()) : _alloc(alloc)
@@ -197,17 +197,26 @@ namespace ft
 				return ;
 			}
 
-			/*iterator	insert (iterator position, const value_type& val);
+			iterator	insert (iterator position, const value_type& val);
 			void		insert (iterator position, size_type n, const value_type& val);
 			template <class InputIterator>
 			void		insert (iterator position, InputIterator first, InputIterator last);
 
 			iterator	erase (iterator position);
-			iterator	erase (iterator first, iterator last);*/
+			iterator	erase (iterator first, iterator last);
 
-			void	swap (vector& x);
+			void swap (vector& x)
+			{
+				if (&x != *this)
+				{
+					std::swap(this->_arr, x._arr);
+					std::swap(this->_size, x._size);
+					std::swap(this->_cap, x._cap);
+					return ;
+				}
+			}
 
-			void	clear()
+			void clear()
 			{
 				if (!this->empty())
 				{

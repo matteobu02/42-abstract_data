@@ -12,6 +12,8 @@
 
 #pragma once
 
+#include <cstddef>
+
 namespace ft
 {
 	struct input_iterator_tag {};
@@ -61,6 +63,7 @@ namespace ft
 			typedef random_access_iterator_tag			iterator_category;
 	};
 
+	// RANDOM ACCESS ITERATOR
 	template <typename T>
 	class random_access_iterator : public iterator<random_access_iterator_tag, T>
 	{
@@ -131,4 +134,10 @@ namespace ft
 	{
 		return (lhs.getPtr() >= rhs.getPtr());
 	}
+
+	// REVERSE ITERATOR
+	template <class Iterator> class reverse_iterator
+	{
+		;
+	};
 }
