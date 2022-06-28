@@ -6,17 +6,15 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:40:02 by mbucci            #+#    #+#             */
-/*   Updated: 2022/06/27 16:55:01 by mbucci           ###   ########.fr       */
+/*   Updated: 2022/06/28 17:12:43 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <stdexcept>
-#include <limits>
 #include <iostream>
-#include "random_access_iterator.hpp"
-#include "reverse_iterator.hpp"
+#include "iterators.hpp"
 #include "lexicographical_compare.hpp"
 
 namespace ft
@@ -32,8 +30,8 @@ namespace ft
 			typedef typename allocator_type::const_pointer						const_pointer;
 			typedef typename ft::random_access_iterator<value_type>				iterator;
 			typedef typename ft::random_access_iterator<const value_type>		const_iterator;
-			typedef typename ft::reverse_iterator<iterator>						reverse_iterator;
-			typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;
+			//typedef typename ft::reverse_iterator<iterator>						reverse_iterator;
+			//typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;
 			typedef size_t														size_type;
 
 			explicit vector (const allocator_type& alloc = allocator_type()) : _alloc(alloc)
@@ -43,7 +41,6 @@ namespace ft
 			explicit vector (size_type n, const value_type& val = value_type(),
 				const allocator_type& alloc = allocator_type()) : _alloc(alloc), _size(n), _cap(n)
 			{
-
 				pointer	tmp;
 
 				this->_arr = this->_alloc.allocate(n);
@@ -55,7 +52,18 @@ namespace ft
 			
 			template <class InputIterator>
 			vector (InputIterator first, InputIterator last,
-				const allocator_type& alloc = allocator_type());
+				const allocator_type& alloc = allocator_type()) : _alloc(alloc)
+			{
+				int	range = last - first;
+
+				if (!range)
+					throw (std::length_error("vactor"));
+				this->_arr = this->_alloc.allocate(range);
+				this->_size = this->_cap = range;
+				for (size_type i = 0; first != last; first++)
+					this->_alloc.construct(this->_arr + i, *first);
+				return ;
+			}
 
 
 			vector (const vector& x) : _alloc(x._alloc), _size(x._size), _cap(x._cap)
@@ -96,6 +104,10 @@ namespace ft
 				}
 				return (*this);
 			}
+
+			// ITERATORS
+			iterator begin()				{ return (this->_arr); }
+			const_iterator begin() const	{ return (this->_arr); }
 
 			// CAPACITY
 			size_type size() const 		{ return (this->_size); }
@@ -185,13 +197,13 @@ namespace ft
 				return ;
 			}
 
-			iterator	insert (iterator position, const value_type& val);
+			/*iterator	insert (iterator position, const value_type& val);
 			void		insert (iterator position, size_type n, const value_type& val);
 			template <class InputIterator>
 			void		insert (iterator position, InputIterator first, InputIterator last);
 
 			iterator	erase (iterator position);
-			iterator	erase (iterator first, iterator last);
+			iterator	erase (iterator first, iterator last);*/
 
 			void	swap (vector& x);
 
@@ -260,7 +272,7 @@ namespace ft
 	template <class T, class Alloc>
 		bool operator<= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
 		{
-			return (!(rhs < rhs));
+			return (!(rhs < lhs));
 		}
 
 	template <class T, class Alloc>

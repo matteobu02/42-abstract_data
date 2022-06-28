@@ -16,14 +16,11 @@ void	print_vect(std::vector<int> const &vect)
 
 int	main()
 {
-	std::vector<int>	mv;
-	//ft::vector<int>		mv(X);
-
-	std::cout << mv.capacity() << std::endl;
-	std::cout << mv.size() << std::endl;
-	mv.pop_back();
-	std::cout << mv.capacity() << std::endl;
-	std::cout << mv.size() << std::endl;
-	//print_vect(mv);
+	//std::vector<int>	mv(10);
+	ft::vector<int>		mv(10);
+	
+	std::vector<int>::iterator	it = mv.begin();
+	ft::vector<int>	n(it + 10, it - 5);
+	
 	return (0);
 }
