@@ -6,13 +6,12 @@
 /*   By: mbucci <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:11:06 by mbucci            #+#    #+#             */
-/*   Updated: 2023/03/15 17:30:59 by mbucci           ###   ########.fr       */
+/*   Updated: 2023/03/30 21:40:42 by mbucci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <cstddef>
 #include "iterator_traits.hpp"
 #include "algorithm.hpp"
 
@@ -47,7 +46,6 @@ namespace ft
 			// Destructor
 			virtual ~random_access_iterator() {}
 
-			// THIS
 			// Member Functions Overloads
 			random_access_iterator& operator= (const random_access_iterator& x)
 			{
