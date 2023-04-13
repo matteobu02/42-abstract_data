@@ -1,0 +1,500 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FATHER	rbt.hpp	/^#define FATHER /;"	d
+FATHER	rbt.hpp	/^#undef FATHER$/;"	d
+GFATHER	rbt.hpp	/^#define GFATHER /;"	d
+GFATHER	rbt.hpp	/^#undef GFATHER$/;"	d
+Iterator	rbt.hpp	/^			Iterator() : _m_node(NULL)							{}$/;"	f	class:ft::Iterator
+Iterator	rbt.hpp	/^			Iterator(const Iterator& x) : _m_node(x._m_node)	{}$/;"	f	class:ft::Iterator
+Iterator	rbt.hpp	/^			Iterator(node_ptr ptr) : _m_node(ptr)				{}$/;"	f	class:ft::Iterator
+Iterator	rbt.hpp	/^	class Iterator : public ft::iterator<ft::bidirectional_iterator_tag, Node<T> >$/;"	c	namespace:ft
+MAX_VAL	main.cpp	/^#define MAX_VAL /;"	d	file:
+Node	rbt.hpp	/^			Node() : is_black(false), parent(NULL), left(NULL), right(NULL) {}$/;"	f	struct:ft::Node
+Node	rbt.hpp	/^			Node(const Node& x)$/;"	f	struct:ft::Node
+Node	rbt.hpp	/^			Node(const value_type& val, bool is_black=true, node_ptr parent=NULL, node_ptr left=NULL, node_ptr right=NULL)$/;"	f	struct:ft::Node
+Node	rbt.hpp	/^	struct Node$/;"	s	namespace:ft
+RBT	rbt.hpp	/^			RBT() : _m_nil(_m_create_nil_node()), _m_size(0)$/;"	f	class:ft::RBT
+RBT	rbt.hpp	/^			RBT(InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type(),$/;"	f	class:ft::RBT
+RBT	rbt.hpp	/^			RBT(const RBT& tree) : _m_alloc(tree._m_alloc), _m_comp(tree._m_comp), _m_size(0)$/;"	f	class:ft::RBT
+RBT	rbt.hpp	/^			RBT(const allocator_type& alloc, const value_compare& comp)$/;"	f	class:ft::RBT
+RBT	rbt.hpp	/^	class RBT$/;"	c	namespace:ft
+TESTED_NAMESPACE	test.cpp	/^#define TESTED_NAMESPACE /;"	d	file:
+__distance	algorithm.hpp	/^		__distance(InputIterator _first, InputIterator _last, input_iterator_tag)$/;"	f	namespace:ft
+__distance	algorithm.hpp	/^		__distance(RandomAccessIterator _first, RandomAccessIterator _last, random_access_iterator_tag)$/;"	f	namespace:ft
+_alloc	vector.hpp	/^			allocator_type	_alloc;$/;"	m	class:ft::vector
+_arr	vector.hpp	/^			pointer			_arr;$/;"	m	class:ft::vector
+_base	iterators.hpp	/^			iterator_type _base;$/;"	m	class:ft::reverse_iterator
+_c	stack.hpp	/^			container_type _c;$/;"	m	class:ft::stack
+_cap	vector.hpp	/^			size_type		_cap;$/;"	m	class:ft::vector
+_construct_range	vector.hpp	/^			void _construct_range(size_type start, size_type end, const value_type& val)$/;"	f	class:ft::vector
+_destroy_range	vector.hpp	/^			void _destroy_range(size_type start, size_type end)$/;"	f	class:ft::vector
+_m_add_node	rbt.hpp	/^			node_ptr _m_add_node(const value_type& val, bool b=false, node_ptr p=NULL, node_ptr r=NULL)$/;"	f	class:ft::RBT
+_m_alloc	map.hpp	/^			allocator_type	_m_alloc;$/;"	m	class:ft::map
+_m_alloc	rbt.hpp	/^			allocator_type		_m_alloc;$/;"	m	class:ft::RBT
+_m_alloc	set.hpp	/^			allocator_type	_m_alloc;$/;"	m	class:ft::set
+_m_clear_tree	rbt.hpp	/^			void _m_clear_tree(node_ptr root)$/;"	f	class:ft::RBT
+_m_clone_tree	rbt.hpp	/^			void _m_clone_tree(const_iterator first, const_iterator last)$/;"	f	class:ft::RBT
+_m_comp	map.hpp	/^			key_compare		_m_comp;$/;"	m	class:ft::map
+_m_comp	rbt.hpp	/^			value_compare		_m_comp;$/;"	m	class:ft::RBT
+_m_comp	set.hpp	/^			key_compare		_m_comp;$/;"	m	class:ft::set
+_m_create_nil_node	rbt.hpp	/^			node_ptr _m_create_nil_node()$/;"	f	class:ft::RBT
+_m_create_node	rbt.hpp	/^			node_ptr _m_create_node(const value_type& val, bool b=false, node_ptr p=NULL, node_ptr r=NULL)$/;"	f	class:ft::RBT
+_m_destroy_nil_node	rbt.hpp	/^			void _m_destroy_nil_node()$/;"	f	class:ft::RBT
+_m_destroy_node	rbt.hpp	/^			void _m_destroy_node(node_ptr target)$/;"	f	class:ft::RBT
+_m_find_greatest_node	rbt.hpp	/^			node_ptr _m_find_greatest_node(node_ptr target) const$/;"	f	class:ft::RBT
+_m_find_smallest_node	rbt.hpp	/^			node_ptr _m_find_smallest_node(node_ptr target) const$/;"	f	class:ft::RBT
+_m_isnil	rbt.hpp	/^			bool _m_isnil(node_ptr node) const$/;"	f	class:ft::RBT
+_m_link_gp_to_child	rbt.hpp	/^			void _m_link_gp_to_child(node_ptr target, node_ptr child)$/;"	f	class:ft::RBT
+_m_max_node	rbt.hpp	/^			node_ptr			_m_max_node;$/;"	m	class:ft::RBT
+_m_nil	rbt.hpp	/^			node_ptr			_m_nil;$/;"	m	class:ft::RBT
+_m_node	rbt.hpp	/^			node_ptr _m_node;$/;"	m	class:ft::Iterator
+_m_node_alloc	rbt.hpp	/^			node_allocator_type	_m_node_alloc;$/;"	m	class:ft::RBT
+_m_rbt_insert_fix	rbt.hpp	/^			void _m_rbt_insert_fix(node_ptr x)$/;"	f	class:ft::RBT
+_m_rbt_left_left_rotate	rbt.hpp	/^			void _m_rbt_left_left_rotate(node_ptr x)$/;"	f	class:ft::RBT
+_m_rbt_left_right_rotate	rbt.hpp	/^			void _m_rbt_left_right_rotate(node_ptr x)$/;"	f	class:ft::RBT
+_m_rbt_remove_check	rbt.hpp	/^			void _m_rbt_remove_check(node_ptr node)$/;"	f	class:ft::RBT
+_m_rbt_remove_fix	rbt.hpp	/^			void _m_rbt_remove_fix(node_ptr target)$/;"	f	class:ft::RBT
+_m_rbt_right_left_rotate	rbt.hpp	/^			void _m_rbt_right_left_rotate(node_ptr x)$/;"	f	class:ft::RBT
+_m_rbt_right_right_rotate	rbt.hpp	/^			void _m_rbt_right_right_rotate(node_ptr x)$/;"	f	class:ft::RBT
+_m_remove_node	rbt.hpp	/^			void _m_remove_node(node_ptr target)$/;"	f	class:ft::RBT
+_m_root	rbt.hpp	/^			node_ptr			_m_root;$/;"	m	class:ft::RBT
+_m_size	rbt.hpp	/^			size_type			_m_size;$/;"	m	class:ft::RBT
+_m_swap_nodes	rbt.hpp	/^			void _m_swap_nodes(node_ptr n1, node_ptr n2)$/;"	f	class:ft::RBT
+_m_tree	map.hpp	/^			redblacktree	_m_tree;$/;"	m	class:ft::map
+_m_tree	set.hpp	/^			redblacktree	_m_tree;$/;"	m	class:ft::set
+_m_update_max_node	rbt.hpp	/^			void _m_update_max_node(node_ptr node=NULL)$/;"	f	class:ft::RBT
+_pair	test.cpp	/^#define _pair /;"	d	file:
+_ptr	iterators.hpp	/^			pointer	_ptr;$/;"	m	class:ft::random_access_iterator
+_reallocate	vector.hpp	/^			void _reallocate(size_type n)$/;"	f	class:ft::vector
+_size	vector.hpp	/^			size_type		_size;$/;"	m	class:ft::vector
+allocator_type	map.hpp	/^			typedef Alloc									allocator_type;$/;"	t	class:ft::map
+allocator_type	rbt.hpp	/^			typedef Alloc														allocator_type;$/;"	t	class:ft::RBT
+allocator_type	set.hpp	/^			typedef Allocator								allocator_type;$/;"	t	class:ft::set
+allocator_type	vector.hpp	/^			typedef Alloc														allocator_type;$/;"	t	class:ft::vector
+assign	vector.hpp	/^			void assign (InputIterator first, InputIterator last,$/;"	f	class:ft::vector
+assign	vector.hpp	/^			void assign (size_type n, const value_type& val)$/;"	f	class:ft::vector
+at	map.hpp	/^			const mapped_type& at(const key_type& key) const$/;"	f	class:ft::map
+at	map.hpp	/^			mapped_type& at(const key_type& key)$/;"	f	class:ft::map
+at	vector.hpp	/^			const_reference	at (size_type n) const$/;"	f	class:ft::vector
+at	vector.hpp	/^			reference		at (size_type n)$/;"	f	class:ft::vector
+back	vector.hpp	/^			const_reference	back()	const	{ return _arr[_size - 1]; }$/;"	f	class:ft::vector
+back	vector.hpp	/^			reference 		back()			{ return _arr[_size - 1]; }$/;"	f	class:ft::vector
+base	iterators.hpp	/^			iterator_type base() const								{ return _base; }$/;"	f	class:ft::reverse_iterator
+base	iterators.hpp	/^			pointer base() const								{ return _ptr; }$/;"	f	class:ft::random_access_iterator
+base	rbt.hpp	/^			node_ptr base() const							{ return _m_node; }$/;"	f	class:ft::Iterator
+begin	map.hpp	/^			const_iterator			begin()		const	{ return _m_tree.begin(); }$/;"	f	class:ft::map
+begin	map.hpp	/^			iterator				begin()				{ return _m_tree.begin(); }$/;"	f	class:ft::map
+begin	rbt.hpp	/^			const_iterator			begin()		const	{ return iterator(_m_find_smallest_node(_m_root)); }$/;"	f	class:ft::RBT
+begin	rbt.hpp	/^			iterator				begin()				{ return iterator(_m_find_smallest_node(_m_root)); }$/;"	f	class:ft::RBT
+begin	set.hpp	/^			const_iterator begin() const { return _m_tree.begin(); }$/;"	f	class:ft::set
+begin	set.hpp	/^			iterator begin() { return _m_tree.begin(); }$/;"	f	class:ft::set
+begin	vector.hpp	/^			const_iterator 			begin()		const	{ return _arr; }$/;"	f	class:ft::vector
+begin	vector.hpp	/^			iterator				begin()				{ return _arr; }$/;"	f	class:ft::vector
+bidirectional_iterator_tag	iterator_traits.hpp	/^	struct bidirectional_iterator_tag : public forward_iterator_tag {};$/;"	s	namespace:ft
+binary_function	functionnal.hpp	/^	struct binary_function$/;"	s	namespace:ft
+capacity	vector.hpp	/^			size_type	capacity()	const	{ return _cap; }$/;"	f	class:ft::vector
+clear	map.hpp	/^			void clear() { _m_tree.clear(); }$/;"	f	class:ft::map
+clear	rbt.hpp	/^			void clear()$/;"	f	class:ft::RBT
+clear	set.hpp	/^			void clear() { _m_tree.clear(); }$/;"	f	class:ft::set
+clear	vector.hpp	/^			void clear()$/;"	f	class:ft::vector
+comp	map.hpp	/^					Compare comp;$/;"	m	class:ft::map::value_compare
+const_iterator	map.hpp	/^			typedef typename redblacktree::const_iterator			const_iterator;$/;"	t	class:ft::map
+const_iterator	rbt.hpp	/^			typedef Iterator<const value_type>									const_iterator;$/;"	t	class:ft::RBT
+const_iterator	set.hpp	/^			typedef typename redblacktree::const_iterator			const_iterator;$/;"	t	class:ft::set
+const_iterator	vector.hpp	/^			typedef typename ft::random_access_iterator<const value_type>		const_iterator;$/;"	t	class:ft::vector
+const_node_ptr	rbt.hpp	/^			typedef Node<const T>*																		const_node_ptr;$/;"	t	class:ft::Iterator
+const_node_ptr	rbt.hpp	/^			typedef Node<const value_type>*										const_node_ptr;$/;"	t	class:ft::RBT
+const_pointer	map.hpp	/^			typedef typename allocator_type::const_pointer	const_pointer;$/;"	t	class:ft::map
+const_pointer	rbt.hpp	/^			typedef const T*																			const_pointer;$/;"	t	class:ft::Iterator
+const_pointer	set.hpp	/^			typedef typename allocator_type::const_pointer	const_pointer;$/;"	t	class:ft::set
+const_pointer	vector.hpp	/^			typedef typename allocator_type::const_pointer						const_pointer;$/;"	t	class:ft::vector
+const_reference	map.hpp	/^			typedef const value_type&						const_reference;$/;"	t	class:ft::map
+const_reference	rbt.hpp	/^			typedef const T&																			const_reference;$/;"	t	class:ft::Iterator
+const_reference	set.hpp	/^			typedef const value_type&						const_reference;$/;"	t	class:ft::set
+const_reference	vector.hpp	/^			typedef typename allocator_type::const_reference					const_reference;$/;"	t	class:ft::vector
+const_reverse_iterator	map.hpp	/^			typedef typename ft::reverse_iterator<const_iterator>	const_reverse_iterator;$/;"	t	class:ft::map
+const_reverse_iterator	rbt.hpp	/^			typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;$/;"	t	class:ft::RBT
+const_reverse_iterator	set.hpp	/^			typedef typename ft::reverse_iterator<const_iterator>	const_reverse_iterator;$/;"	t	class:ft::set
+const_reverse_iterator	vector.hpp	/^			typedef typename ft::reverse_iterator<const_iterator>				const_reverse_iterator;$/;"	t	class:ft::vector
+container_type	stack.hpp	/^			typedef Container	container_type;$/;"	t	class:ft::stack
+count	map.hpp	/^			size_type count(const key_type& key) const$/;"	f	class:ft::map
+count	set.hpp	/^			size_type count(const key_type& key) const$/;"	f	class:ft::set
+data	rbt.hpp	/^			value_type	data;$/;"	m	struct:ft::Node
+difference_type	iterator_traits.hpp	/^			typedef ptrdiff_t					difference_type;$/;"	t	class:ft::iterator_traits
+difference_type	iterator_traits.hpp	/^			typedef typename Iterator::difference_type		difference_type;$/;"	t	class:ft::iterator_traits
+difference_type	iterators.hpp	/^			typedef typename iterator<random_access_iterator_tag, T>::difference_type	difference_type;$/;"	t	class:ft::random_access_iterator
+difference_type	iterators.hpp	/^			typedef typename iterator_traits<Iterator>::difference_type		difference_type;$/;"	t	class:ft::reverse_iterator
+difference_type	iterators.hpp	/^		typedef Distance	difference_type;$/;"	t	struct:ft::iterator
+difference_type	map.hpp	/^			typedef ptrdiff_t								difference_type;$/;"	t	class:ft::map
+difference_type	rbt.hpp	/^			typedef typename ft::iterator<ft::bidirectional_iterator_tag, Node<T> >::difference_type	difference_type;$/;"	t	class:ft::Iterator
+difference_type	set.hpp	/^			typedef ptrdiff_t								difference_type;$/;"	t	class:ft::set
+difference_type	vector.hpp	/^			typedef typename ft::iterator_traits<iterator>::difference_type		difference_type;$/;"	t	class:ft::vector
+distance	algorithm.hpp	/^		distance(InputIterator first, InputIterator last)$/;"	f	namespace:ft
+empty	map.hpp	/^			bool 		empty() 	const	{ return !size(); }$/;"	f	class:ft::map
+empty	set.hpp	/^			bool empty() const { return !size(); }$/;"	f	class:ft::set
+empty	stack.hpp	/^			bool empty() const		{ return _c.empty(); }$/;"	f	class:ft::stack
+empty	vector.hpp	/^			bool		empty()		const	{ return !_size; }$/;"	f	class:ft::vector
+enable_if	type_traits.hpp	/^	struct enable_if {};$/;"	s	namespace:ft
+enable_if	type_traits.hpp	/^	struct enable_if<true, T> { typedef T type; };$/;"	s	namespace:ft
+end	map.hpp	/^			const_iterator			end()		const	{ return _m_tree.end(); }$/;"	f	class:ft::map
+end	map.hpp	/^			iterator				end()				{ return _m_tree.end(); }$/;"	f	class:ft::map
+end	rbt.hpp	/^			const_iterator 			end()		const	{ return iterator(_m_nil); }$/;"	f	class:ft::RBT
+end	rbt.hpp	/^			iterator			 	end()				{ return iterator(_m_nil); }$/;"	f	class:ft::RBT
+end	set.hpp	/^			const_iterator end() const { return _m_tree.end(); }$/;"	f	class:ft::set
+end	set.hpp	/^			iterator end() { return _m_tree.end(); }$/;"	f	class:ft::set
+end	vector.hpp	/^			const_iterator			end() 		const	{ return (_arr + _size); }$/;"	f	class:ft::vector
+end	vector.hpp	/^			iterator 				end()				{ return (_arr + _size); }$/;"	f	class:ft::vector
+equal_range	map.hpp	/^			ft::pair<const_iterator, const_iterator>	equal_range(const key_type& key) const	{ return ft::make_pair(lower_bound(key), upper_bound(key)); }$/;"	f	class:ft::map
+equal_range	map.hpp	/^			ft::pair<iterator, iterator> 				equal_range(const key_type& key)		{ return ft::make_pair(lower_bound(key), upper_bound(key)); }$/;"	f	class:ft::map
+equal_range	set.hpp	/^			ft::pair<const_iterator, const_iterator> equal_range(const Key& key) const { return ft::make_pair(lower_bound(key), upper_bound(key)); }$/;"	f	class:ft::set
+equal_range	set.hpp	/^			ft::pair<iterator, iterator> equal_range(const Key& key) { return ft::make_pair(lower_bound(key), upper_bound(key)); }$/;"	f	class:ft::set
+erase	map.hpp	/^			iterator erase(iterator first, iterator last)$/;"	f	class:ft::map
+erase	map.hpp	/^			iterator erase(iterator pos)$/;"	f	class:ft::map
+erase	map.hpp	/^			size_type erase(const key_type& key)$/;"	f	class:ft::map
+erase	set.hpp	/^			iterator erase(iterator first, iterator last)$/;"	f	class:ft::set
+erase	set.hpp	/^			iterator erase(iterator pos)$/;"	f	class:ft::set
+erase	set.hpp	/^			size_type erase(const key_type& key)$/;"	f	class:ft::set
+erase	vector.hpp	/^			iterator erase (iterator first, iterator last)$/;"	f	class:ft::vector
+erase	vector.hpp	/^			iterator erase (iterator position)$/;"	f	class:ft::vector
+false_type	type_traits.hpp	/^	typedef integral_constant<bool, false>	false_type;$/;"	t	namespace:ft
+find	map.hpp	/^			const_iterator	find(const key_type& key) const		{ return _m_tree.search(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+find	map.hpp	/^			iterator		find(const key_type& key)			{ return _m_tree.search(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+find	set.hpp	/^			const_iterator find(const Key& key) const { return _m_tree.search(key); }$/;"	f	class:ft::set
+find	set.hpp	/^			iterator find(const Key& key) { return _m_tree.search(key); }$/;"	f	class:ft::set
+first	utility.hpp	/^			first_type first;$/;"	m	struct:ft::pair
+first_argument_type	functionnal.hpp	/^		typedef Arg1	first_argument_type;$/;"	t	struct:ft::binary_function
+first_argument_type	map.hpp	/^					typedef value_type	first_argument_type;$/;"	t	class:ft::map::value_compare
+first_type	utility.hpp	/^			typedef T1	first_type;$/;"	t	struct:ft::pair
+forward_iterator_tag	iterator_traits.hpp	/^	struct forward_iterator_tag : public input_iterator_tag {};$/;"	s	namespace:ft
+front	vector.hpp	/^			const_reference	front()	const	{ return _arr[0]; }$/;"	f	class:ft::vector
+front	vector.hpp	/^			reference 		front()			{ return _arr[0]; }$/;"	f	class:ft::vector
+ft	algorithm.hpp	/^namespace ft$/;"	n
+ft	functionnal.hpp	/^namespace ft$/;"	n
+ft	iterator_traits.hpp	/^namespace ft$/;"	n
+ft	iterators.hpp	/^namespace ft$/;"	n
+ft	map.hpp	/^namespace ft$/;"	n
+ft	rbt.hpp	/^namespace ft$/;"	n
+ft	set.hpp	/^namespace ft$/;"	n
+ft	stack.hpp	/^namespace ft$/;"	n
+ft	type_traits.hpp	/^namespace ft$/;"	n
+ft	utility.hpp	/^namespace ft$/;"	n
+ft	vector.hpp	/^namespace ft$/;"	n
+get_allocator	map.hpp	/^			allocator_type	get_allocator() const { return _m_alloc; }$/;"	f	class:ft::map
+get_allocator	set.hpp	/^			allocator_type	get_allocator() const { return _m_alloc; }$/;"	f	class:ft::set
+get_allocator	vector.hpp	/^			allocator_type get_allocator() const { return _alloc; }$/;"	f	class:ft::vector
+input_iterator_tag	iterator_traits.hpp	/^	struct input_iterator_tag {};$/;"	s	namespace:ft
+insert	map.hpp	/^			ft::pair<iterator, bool> insert(const value_type& value)$/;"	f	class:ft::map
+insert	map.hpp	/^			iterator insert(iterator pos, const value_type& value)$/;"	f	class:ft::map
+insert	map.hpp	/^			void insert(InputIt first, InputIt last)$/;"	f	class:ft::map
+insert	rbt.hpp	/^			iterator insert(const value_type& val)$/;"	f	class:ft::RBT
+insert	rbt.hpp	/^			iterator insert(const value_type& val, node_ptr previous)$/;"	f	class:ft::RBT
+insert	set.hpp	/^			ft::pair<iterator, bool> insert(const value_type& value)$/;"	f	class:ft::set
+insert	set.hpp	/^			iterator insert(iterator pos, const value_type& value)$/;"	f	class:ft::set
+insert	set.hpp	/^			void insert(InputIt first, InputIt last)$/;"	f	class:ft::set
+insert	vector.hpp	/^				void insert (iterator position, InputIterator first, InputIterator last,$/;"	f	class:ft::vector
+insert	vector.hpp	/^			iterator insert (iterator position, const value_type& val)$/;"	f	class:ft::vector
+insert	vector.hpp	/^			void insert (iterator position, size_type n, const value_type& val)$/;"	f	class:ft::vector
+integral_constant	type_traits.hpp	/^	struct integral_constant$/;"	s	namespace:ft
+is_black	rbt.hpp	/^			bool		is_black;$/;"	m	struct:ft::Node
+is_integral	type_traits.hpp	/^	struct is_integral : public is_integral_helper<T> {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper : public false_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<bool> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<char16_t> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<char32_t> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<char> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<int> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<long long> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<long> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<short> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<signed char> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<unsigned char> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<unsigned int> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<unsigned long long> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<unsigned long> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<unsigned short> : public true_type {};$/;"	s	namespace:ft
+is_integral_helper	type_traits.hpp	/^	struct is_integral_helper<wchar_t> : public true_type {};$/;"	s	namespace:ft
+iterator	iterators.hpp	/^	struct iterator$/;"	s	namespace:ft
+iterator	map.hpp	/^			typedef typename redblacktree::iterator					iterator;$/;"	t	class:ft::map
+iterator	rbt.hpp	/^			typedef Iterator<value_type>										iterator;$/;"	t	class:ft::RBT
+iterator	set.hpp	/^			typedef typename redblacktree::iterator					iterator;$/;"	t	class:ft::set
+iterator	vector.hpp	/^			typedef typename ft::random_access_iterator<value_type>				iterator;$/;"	t	class:ft::vector
+iterator_category	iterator_traits.hpp	/^			typedef random_access_iterator_tag	iterator_category;$/;"	t	class:ft::iterator_traits
+iterator_category	iterator_traits.hpp	/^			typedef typename Iterator::iterator_category	iterator_category;$/;"	t	class:ft::iterator_traits
+iterator_category	iterators.hpp	/^			typedef typename iterator<random_access_iterator_tag, T>::iterator_category	iterator_category;$/;"	t	class:ft::random_access_iterator
+iterator_category	iterators.hpp	/^			typedef typename iterator_traits<Iterator>::iterator_category	iterator_category;$/;"	t	class:ft::reverse_iterator
+iterator_category	iterators.hpp	/^		typedef Category	iterator_category;$/;"	t	struct:ft::iterator
+iterator_category	rbt.hpp	/^			typedef typename ft::iterator<ft::bidirectional_iterator_tag, Node<T> >::iterator_category	iterator_category;$/;"	t	class:ft::Iterator
+iterator_traits	iterator_traits.hpp	/^	class iterator_traits$/;"	c	namespace:ft
+iterator_traits	iterator_traits.hpp	/^	class iterator_traits<T*>$/;"	c	namespace:ft
+iterator_traits	iterator_traits.hpp	/^	class iterator_traits<const T*>$/;"	c	namespace:ft
+iterator_type	iterators.hpp	/^			typedef Iterator												iterator_type;$/;"	t	class:ft::reverse_iterator
+key_comp	map.hpp	/^			key_compare		key_comp()		const { return _m_comp; }$/;"	f	class:ft::map
+key_comp	set.hpp	/^			key_compare key_comp() const { return _m_comp; }$/;"	f	class:ft::set
+key_compare	map.hpp	/^			typedef Compare									key_compare;$/;"	t	class:ft::map
+key_compare	set.hpp	/^			typedef Compare									key_compare;$/;"	t	class:ft::set
+key_type	map.hpp	/^			typedef Key										key_type;$/;"	t	class:ft::map
+key_type	set.hpp	/^			typedef Key										key_type;$/;"	t	class:ft::set
+left	rbt.hpp	/^			node_ptr	left;$/;"	m	struct:ft::Node
+less	functionnal.hpp	/^	struct less : public binary_function <T,T,bool>$/;"	s	namespace:ft
+lexicographical_compare	algorithm.hpp	/^		bool lexicographical_compare (InputIterator1 first1, InputIterator1 last1,$/;"	f	namespace:ft
+lower_bound	map.hpp	/^			const_iterator	lower_bound(const key_type& key) const	{ return _m_tree.lower_bound(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+lower_bound	map.hpp	/^			iterator		lower_bound(const key_type& key)		{ return _m_tree.lower_bound(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+lower_bound	rbt.hpp	/^			iterator lower_bound(const value_type& val) const$/;"	f	class:ft::RBT
+lower_bound	set.hpp	/^			const_iterator lower_bound(const Key& key) const { return _m_tree.lower_bound(key); }$/;"	f	class:ft::set
+lower_bound	set.hpp	/^			iterator lower_bound(const Key& key) { return _m_tree.lower_bound(key); }$/;"	f	class:ft::set
+main	main.cpp	/^int main(int, char**)$/;"	f
+main	test.cpp	/^int		main(void)$/;"	f
+make_pair	utility.hpp	/^	pair<T1,T2> make_pair (T1 x, T2 y) { return pair<T1,T2>(x, y); }$/;"	f	namespace:ft
+map	map.hpp	/^			explicit map (const key_compare& comp = key_compare(), const allocator_type& alloc = allocator_type())$/;"	f	class:ft::map
+map	map.hpp	/^			map (InputIt first, InputIt last, const key_compare& comp = key_compare(), const allocator_type& alloc = allocator_type())$/;"	f	class:ft::map
+map	map.hpp	/^			map (const map& other) : _m_alloc(other._m_alloc), _m_comp(other._m_comp), _m_tree(other._m_tree)$/;"	f	class:ft::map
+map	map.hpp	/^	class map$/;"	c	namespace:ft
+mapped_type	map.hpp	/^			typedef T										mapped_type;$/;"	t	class:ft::map
+max_size	map.hpp	/^			size_type	max_size()	const	{ return _m_tree.max_size(); }$/;"	f	class:ft::map
+max_size	rbt.hpp	/^			size_type	max_size()	const	{ return (_m_alloc.max_size()); }$/;"	f	class:ft::RBT
+max_size	set.hpp	/^			size_type max_size() const { return _m_tree.max_size(); }$/;"	f	class:ft::set
+max_size	vector.hpp	/^			size_type	max_size()	const 	{ return _alloc.max_size(); }$/;"	f	class:ft::vector
+node_allocator_type	rbt.hpp	/^			typedef typename Alloc::template rebind<Node<value_type> >::other	node_allocator_type;$/;"	t	class:ft::RBT
+node_ptr	rbt.hpp	/^			typedef Node*	node_ptr;$/;"	t	struct:ft::Node
+node_ptr	rbt.hpp	/^			typedef Node<T>*																			node_ptr;$/;"	t	class:ft::Iterator
+node_ptr	rbt.hpp	/^			typedef Node<value_type>*											node_ptr;$/;"	t	class:ft::RBT
+operator !=	iterators.hpp	/^		bool operator!= (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator !=	iterators.hpp	/^		bool operator!= (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator !=	map.hpp	/^	bool operator!= (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator !=	rbt.hpp	/^			bool operator!= (const Iterator& rhs) const$/;"	f	class:ft::Iterator
+operator !=	set.hpp	/^	bool operator!= (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator !=	stack.hpp	/^		bool operator!= (const stack<T, Container>& lhs, const stack<T, Container>& rhs)$/;"	f	namespace:ft
+operator !=	utility.hpp	/^	bool operator!= (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator !=	vector.hpp	/^		bool operator!= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator ()	functionnal.hpp	/^		bool operator() (const T& x, const T& y) const { return (x < y); }$/;"	f	struct:ft::less
+operator ()	map.hpp	/^					bool operator() (const value_type& lhs, const value_type& rhs) const$/;"	f	class:ft::map::value_compare
+operator *	iterators.hpp	/^			reference operator* () const						{ return *_ptr; }$/;"	f	class:ft::random_access_iterator
+operator *	iterators.hpp	/^			reference operator* () const$/;"	f	class:ft::reverse_iterator
+operator *	rbt.hpp	/^			const_reference operator* ()	const			{ return _m_node->data; }$/;"	f	class:ft::Iterator
+operator *	rbt.hpp	/^			reference 		operator* ()		    		{ return _m_node->data; }$/;"	f	class:ft::Iterator
+operator +	iterators.hpp	/^			random_access_iterator operator+ (difference_type n) const$/;"	f	class:ft::random_access_iterator
+operator +	iterators.hpp	/^			reverse_iterator operator+ (difference_type n) const	{ return (reverse_iterator(_base - n)); }$/;"	f	class:ft::reverse_iterator
+operator +	iterators.hpp	/^		random_access_iterator<Iterator> operator+ (const typename random_access_iterator<Iterator>::difference_type lhs,$/;"	f	namespace:ft
+operator +	iterators.hpp	/^		reverse_iterator<Iterator> operator+ (typename reverse_iterator<Iterator>::difference_type n,$/;"	f	namespace:ft
+operator ++	iterators.hpp	/^			random_access_iterator &operator++ ()$/;"	f	class:ft::random_access_iterator
+operator ++	iterators.hpp	/^			random_access_iterator operator++ (int)$/;"	f	class:ft::random_access_iterator
+operator ++	iterators.hpp	/^			reverse_iterator operator++ (int)$/;"	f	class:ft::reverse_iterator
+operator ++	iterators.hpp	/^			reverse_iterator& operator++ ()$/;"	f	class:ft::reverse_iterator
+operator ++	rbt.hpp	/^			Iterator &operator++ ()$/;"	f	class:ft::Iterator
+operator ++	rbt.hpp	/^			Iterator operator++ (int)$/;"	f	class:ft::Iterator
+operator +=	iterators.hpp	/^			random_access_iterator& operator+= (difference_type n)$/;"	f	class:ft::random_access_iterator
+operator +=	iterators.hpp	/^			reverse_iterator& operator+= (difference_type n)$/;"	f	class:ft::reverse_iterator
+operator -	iterators.hpp	/^			random_access_iterator operator- (difference_type n) const$/;"	f	class:ft::random_access_iterator
+operator -	iterators.hpp	/^			reverse_iterator operator- (difference_type n) const$/;"	f	class:ft::reverse_iterator
+operator -	iterators.hpp	/^		operator- (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator -	iterators.hpp	/^		typename random_access_iterator<I1>::difference_type operator- (const random_access_iterator<I1>& lhs,$/;"	f	namespace:ft
+operator --	iterators.hpp	/^			random_access_iterator &operator-- ()$/;"	f	class:ft::random_access_iterator
+operator --	iterators.hpp	/^			random_access_iterator operator-- (int)$/;"	f	class:ft::random_access_iterator
+operator --	iterators.hpp	/^			reverse_iterator operator-- (int)$/;"	f	class:ft::reverse_iterator
+operator --	iterators.hpp	/^			reverse_iterator& operator-- ()$/;"	f	class:ft::reverse_iterator
+operator --	rbt.hpp	/^			Iterator &operator-- ()$/;"	f	class:ft::Iterator
+operator --	rbt.hpp	/^			Iterator operator-- (int)$/;"	f	class:ft::Iterator
+operator -=	iterators.hpp	/^			random_access_iterator& operator-= (difference_type n)$/;"	f	class:ft::random_access_iterator
+operator -=	iterators.hpp	/^			reverse_iterator& operator-= (difference_type n)$/;"	f	class:ft::reverse_iterator
+operator ->	iterators.hpp	/^			pointer operator-> () const							{ return &(operator*()); }$/;"	f	class:ft::random_access_iterator
+operator ->	iterators.hpp	/^			pointer operator-> () const						{ return &(operator* ()); }$/;"	f	class:ft::reverse_iterator
+operator ->	rbt.hpp	/^			const_pointer	operator-> ()	const   		{ return &(operator* ()); }$/;"	f	class:ft::Iterator
+operator ->	rbt.hpp	/^			pointer			operator-> ()		   			{ return &(operator* ()); }$/;"	f	class:ft::Iterator
+operator <	iterators.hpp	/^		bool operator< (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator <	iterators.hpp	/^		bool operator< (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator <	map.hpp	/^	bool operator< (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator <	set.hpp	/^	bool operator< (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator <	stack.hpp	/^				friend bool operator< (const stack<T1, Container1>& lhs, const stack<T1, Container1>& rhs)$/;"	f	class:ft::stack
+operator <	utility.hpp	/^	bool operator< (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator <	vector.hpp	/^		bool operator< (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator <=	iterators.hpp	/^		bool operator<= (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator <=	iterators.hpp	/^		bool operator<= (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator <=	map.hpp	/^	bool operator<= (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator <=	set.hpp	/^	bool operator<= (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator <=	stack.hpp	/^		bool operator<= (const stack<T, Container>& lhs, const stack<T, Container>& rhs)$/;"	f	namespace:ft
+operator <=	utility.hpp	/^	bool operator<= (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator <=	vector.hpp	/^		bool operator<= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator =	iterators.hpp	/^			random_access_iterator& operator= (const random_access_iterator& x)$/;"	f	class:ft::random_access_iterator
+operator =	map.hpp	/^			map& operator= (const map& other)$/;"	f	class:ft::map
+operator =	rbt.hpp	/^			Iterator& operator= (const Iterator& x)$/;"	f	class:ft::Iterator
+operator =	rbt.hpp	/^			Node operator= (const Node& other)$/;"	f	struct:ft::Node
+operator =	rbt.hpp	/^			RBT operator= (const RBT& tree)$/;"	f	class:ft::RBT
+operator =	set.hpp	/^			set operator= (const set& other)$/;"	f	class:ft::set
+operator =	utility.hpp	/^			pair& operator= (const pair& pr)$/;"	f	struct:ft::pair
+operator =	vector.hpp	/^			vector&	operator= (const vector& x)$/;"	f	class:ft::vector
+operator ==	iterators.hpp	/^		bool operator== (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator ==	iterators.hpp	/^		bool operator== (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator ==	map.hpp	/^	bool operator== (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator ==	rbt.hpp	/^			bool operator== (const Iterator& rhs) const$/;"	f	class:ft::Iterator
+operator ==	set.hpp	/^	bool operator== (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator ==	stack.hpp	/^				friend bool operator== (const stack<T1, Container1>& lhs, const stack<T1, Container1>& rhs)$/;"	f	class:ft::stack
+operator ==	utility.hpp	/^	bool operator== (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator ==	vector.hpp	/^		bool operator== (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator >	iterators.hpp	/^		bool operator> (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator >	iterators.hpp	/^		bool operator> (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator >	map.hpp	/^	bool operator> (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator >	set.hpp	/^	bool operator> (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator >	stack.hpp	/^		bool operator> (const stack<T, Container>& lhs, const stack<T, Container>& rhs)$/;"	f	namespace:ft
+operator >	utility.hpp	/^	bool operator> (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator >	vector.hpp	/^		bool operator> (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator >=	iterators.hpp	/^		bool operator>= (const random_access_iterator<I1>& lhs, const random_access_iterator<I2>& rhs)$/;"	f	namespace:ft
+operator >=	iterators.hpp	/^		bool operator>= (const reverse_iterator<Iterator1>& lhs, const reverse_iterator<Iterator2>& rhs)$/;"	f	namespace:ft
+operator >=	map.hpp	/^	bool operator>= (const map<Key, T, Compare, Alloc>& lhs, const map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator >=	set.hpp	/^	bool operator>= (const set<Key, Compare, Alloc>& lhs, const set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+operator >=	stack.hpp	/^		bool operator>= (const stack<T, Container>& lhs, const stack<T, Container>& rhs)$/;"	f	namespace:ft
+operator >=	utility.hpp	/^	bool operator>= (const pair<T1,T2>& lhs, const pair<T1,T2>& rhs)$/;"	f	namespace:ft
+operator >=	vector.hpp	/^		bool operator>= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+operator Iterator<const value_type>	rbt.hpp	/^			operator Iterator<const value_type> () const	{ return Iterator<const value_type>(reinterpret_cast<const_node_ptr>(_m_node)); }$/;"	f	class:ft::Iterator
+operator []	iterators.hpp	/^			reference operator[] (difference_type n) const	{ return _base[-n - 1]; }$/;"	f	class:ft::reverse_iterator
+operator []	iterators.hpp	/^			reference operator[] (difference_type n) const { return _ptr[n]; }$/;"	f	class:ft::random_access_iterator
+operator []	map.hpp	/^			mapped_type& operator[] (const key_type& key)$/;"	f	class:ft::map
+operator []	vector.hpp	/^			const_reference	operator[] (size_type n) const	{ return _arr[n]; }$/;"	f	class:ft::vector
+operator []	vector.hpp	/^			reference		operator[] (size_type n)		{ return _arr[n]; }$/;"	f	class:ft::vector
+operator random_access_iterator<const T>	iterators.hpp	/^			operator random_access_iterator<const T>() const	{ return _ptr; }$/;"	f	class:ft::random_access_iterator
+operator reverse_iterator<const Iterator>	iterators.hpp	/^			operator reverse_iterator<const Iterator>() const		{ return _base; }$/;"	f	class:ft::reverse_iterator
+output_iterator_tag	iterator_traits.hpp	/^	struct output_iterator_tag {};$/;"	s	namespace:ft
+pair	utility.hpp	/^			pair (const first_type& a, const second_type& b) : first(a), second(b) {}$/;"	f	struct:ft::pair
+pair	utility.hpp	/^			pair (const pair<U,V>& pr) : first(pr.first), second(pr.second) {}$/;"	f	struct:ft::pair
+pair	utility.hpp	/^			pair() {}$/;"	f	struct:ft::pair
+pair	utility.hpp	/^	template <class T1, class T2> struct pair$/;"	s	namespace:ft
+parent	rbt.hpp	/^			node_ptr	parent;$/;"	m	struct:ft::Node
+pointer	iterator_traits.hpp	/^			typedef T*							pointer;$/;"	t	class:ft::iterator_traits
+pointer	iterator_traits.hpp	/^			typedef const T*					pointer;$/;"	t	class:ft::iterator_traits
+pointer	iterator_traits.hpp	/^			typedef typename Iterator::pointer				pointer;$/;"	t	class:ft::iterator_traits
+pointer	iterators.hpp	/^			typedef typename iterator<random_access_iterator_tag, T>::pointer			pointer;$/;"	t	class:ft::random_access_iterator
+pointer	iterators.hpp	/^			typedef typename iterator_traits<Iterator>::pointer				pointer;$/;"	t	class:ft::reverse_iterator
+pointer	iterators.hpp	/^		typedef Pointer		pointer;$/;"	t	struct:ft::iterator
+pointer	map.hpp	/^			typedef typename allocator_type::pointer		pointer;$/;"	t	class:ft::map
+pointer	rbt.hpp	/^			typedef T*																					pointer;$/;"	t	class:ft::Iterator
+pointer	set.hpp	/^			typedef typename allocator_type::pointer		pointer;$/;"	t	class:ft::set
+pointer	vector.hpp	/^			typedef typename allocator_type::pointer							pointer;$/;"	t	class:ft::vector
+pop	stack.hpp	/^			void pop()$/;"	f	class:ft::stack
+pop_back	vector.hpp	/^			void pop_back()$/;"	f	class:ft::vector
+push	stack.hpp	/^			void push (const value_type& val)$/;"	f	class:ft::stack
+push_back	vector.hpp	/^			void push_back (const value_type& val)$/;"	f	class:ft::vector
+random_access_iterator	iterators.hpp	/^			random_access_iterator() : _ptr(NULL)									{}$/;"	f	class:ft::random_access_iterator
+random_access_iterator	iterators.hpp	/^			random_access_iterator(const random_access_iterator& x) : _ptr(x._ptr)	{}$/;"	f	class:ft::random_access_iterator
+random_access_iterator	iterators.hpp	/^			random_access_iterator(pointer ptr) : _ptr(ptr)							{}$/;"	f	class:ft::random_access_iterator
+random_access_iterator	iterators.hpp	/^	class random_access_iterator : public iterator<ft::random_access_iterator_tag, T>$/;"	c	namespace:ft
+random_access_iterator_tag	iterator_traits.hpp	/^	struct random_access_iterator_tag : public bidirectional_iterator_tag {};$/;"	s	namespace:ft
+rbegin	map.hpp	/^			const_reverse_iterator	rbegin()	const	{ return _m_tree.rbegin(); }$/;"	f	class:ft::map
+rbegin	map.hpp	/^			reverse_iterator		rbegin()			{ return _m_tree.rbegin(); }$/;"	f	class:ft::map
+rbegin	rbt.hpp	/^			const_reverse_iterator	rbegin()	const	{ return const_reverse_iterator(end()); }$/;"	f	class:ft::RBT
+rbegin	rbt.hpp	/^			reverse_iterator		rbegin()			{ return reverse_iterator(end()); }$/;"	f	class:ft::RBT
+rbegin	set.hpp	/^			const_reverse_iterator rbegin() const { return const_reverse_iterator(begin()); }$/;"	f	class:ft::set
+rbegin	set.hpp	/^			reverse_iterator rbegin() { return reverse_iterator(begin()); }$/;"	f	class:ft::set
+rbegin	vector.hpp	/^			const_reverse_iterator	rbegin() 	const	{ return const_reverse_iterator(end()); }$/;"	f	class:ft::vector
+rbegin	vector.hpp	/^			reverse_iterator		rbegin()			{ return reverse_iterator(end()); }$/;"	f	class:ft::vector
+redblacktree	map.hpp	/^			typedef ft::RBT<value_type, value_compare, allocator_type>	redblacktree;$/;"	t	class:ft::map
+redblacktree	set.hpp	/^			typedef ft::RBT<value_type, value_compare, allocator_type>	redblacktree;$/;"	t	class:ft::set
+reference	iterator_traits.hpp	/^			typedef T&							reference;$/;"	t	class:ft::iterator_traits
+reference	iterator_traits.hpp	/^			typedef const T&					reference;$/;"	t	class:ft::iterator_traits
+reference	iterator_traits.hpp	/^			typedef typename Iterator::reference			reference;$/;"	t	class:ft::iterator_traits
+reference	iterators.hpp	/^			typedef typename iterator<random_access_iterator_tag, T>::reference			reference;$/;"	t	class:ft::random_access_iterator
+reference	iterators.hpp	/^			typedef typename iterator_traits<Iterator>::reference			reference;$/;"	t	class:ft::reverse_iterator
+reference	iterators.hpp	/^		typedef Reference	reference;$/;"	t	struct:ft::iterator
+reference	map.hpp	/^			typedef value_type&								reference;$/;"	t	class:ft::map
+reference	rbt.hpp	/^			typedef T&																					reference;$/;"	t	class:ft::Iterator
+reference	set.hpp	/^			typedef value_type&								reference;$/;"	t	class:ft::set
+reference	vector.hpp	/^			typedef typename allocator_type::reference							reference;$/;"	t	class:ft::vector
+remove	rbt.hpp	/^			bool remove(const value_type& val)$/;"	f	class:ft::RBT
+remove	rbt.hpp	/^			bool remove(node_ptr target)$/;"	f	class:ft::RBT
+remove	rbt.hpp	/^			void remove(iterator first, iterator last)$/;"	f	class:ft::RBT
+rend	map.hpp	/^			const_reverse_iterator	rend()		const	{ return _m_tree.rend(); }$/;"	f	class:ft::map
+rend	map.hpp	/^			reverse_iterator		rend()				{ return _m_tree.rend(); }$/;"	f	class:ft::map
+rend	rbt.hpp	/^			const_reverse_iterator	rend()		const	{ return const_reverse_iterator(begin()); }$/;"	f	class:ft::RBT
+rend	rbt.hpp	/^			reverse_iterator		rend()				{ return reverse_iterator(begin()); }$/;"	f	class:ft::RBT
+rend	set.hpp	/^			const_reverse_iterator rend() const { return const_reverse_iterator(end()); }$/;"	f	class:ft::set
+rend	set.hpp	/^			reverse_iterator rend() { return reverse_iterator(end()); }$/;"	f	class:ft::set
+rend	vector.hpp	/^			const_reverse_iterator	rend() 		const	{ return const_reverse_iterator(begin()); }$/;"	f	class:ft::vector
+rend	vector.hpp	/^			reverse_iterator		rend()				{ return reverse_iterator(begin()); }$/;"	f	class:ft::vector
+reserve	vector.hpp	/^			void reserve (size_type n)$/;"	f	class:ft::vector
+resize	vector.hpp	/^			void resize (size_type n, value_type val = value_type())$/;"	f	class:ft::vector
+result_type	functionnal.hpp	/^		typedef Result	result_type;$/;"	t	struct:ft::binary_function
+result_type	map.hpp	/^					typedef bool		result_type;$/;"	t	class:ft::map::value_compare
+reverse_iterator	iterators.hpp	/^				reverse_iterator (const reverse_iterator<Iter>& rev_it) : _base(rev_it.base()) {}$/;"	f	class:ft::reverse_iterator
+reverse_iterator	iterators.hpp	/^			explicit reverse_iterator (iterator_type it) : _base(it)	{}$/;"	f	class:ft::reverse_iterator
+reverse_iterator	iterators.hpp	/^			reverse_iterator() : _base(NULL) 							{}$/;"	f	class:ft::reverse_iterator
+reverse_iterator	iterators.hpp	/^	template <class Iterator> class reverse_iterator$/;"	c	namespace:ft
+reverse_iterator	map.hpp	/^			typedef typename ft::reverse_iterator<iterator>			reverse_iterator;$/;"	t	class:ft::map
+reverse_iterator	rbt.hpp	/^			typedef typename ft::reverse_iterator<iterator>						reverse_iterator;$/;"	t	class:ft::RBT
+reverse_iterator	set.hpp	/^			typedef typename ft::reverse_iterator<iterator>			reverse_iterator;$/;"	t	class:ft::set
+reverse_iterator	vector.hpp	/^			typedef typename ft::reverse_iterator<iterator>						reverse_iterator;$/;"	t	class:ft::vector
+right	rbt.hpp	/^			node_ptr	right;$/;"	m	struct:ft::Node
+search	rbt.hpp	/^			iterator search(const value_type& val) const$/;"	f	class:ft::RBT
+second	utility.hpp	/^			second_type second;$/;"	m	struct:ft::pair
+second_argument_type	functionnal.hpp	/^		typedef Arg2	second_argument_type;$/;"	t	struct:ft::binary_function
+second_argument_type	map.hpp	/^					typedef value_type	second_argument_type;$/;"	t	class:ft::map::value_compare
+second_type	utility.hpp	/^			typedef T2	second_type;$/;"	t	struct:ft::pair
+set	set.hpp	/^			explicit set (const key_compare& comp = key_compare(), const allocator_type& alloc = allocator_type())$/;"	f	class:ft::set
+set	set.hpp	/^			set (InputIt first, InputIt last, const key_compare& comp = Compare(), const allocator_type& alloc = allocator_type())$/;"	f	class:ft::set
+set	set.hpp	/^			set (const set& other) : _m_alloc(other._m_alloc), _m_comp(other._m_comp), _m_tree(other._m_tree)$/;"	f	class:ft::set
+set	set.hpp	/^	class set$/;"	c	namespace:ft
+size	map.hpp	/^			size_type	size()		const	{ return _m_tree.size(); }$/;"	f	class:ft::map
+size	rbt.hpp	/^			size_type	size()		const	{ return _m_size; }$/;"	f	class:ft::RBT
+size	set.hpp	/^			size_type size() const { return _m_tree.size(); }$/;"	f	class:ft::set
+size	stack.hpp	/^			size_type size() const	{ return _c.size(); }$/;"	f	class:ft::stack
+size	vector.hpp	/^			size_type	size() 		const 	{ return _size; }$/;"	f	class:ft::vector
+size_type	map.hpp	/^			typedef size_t									size_type;$/;"	t	class:ft::map
+size_type	rbt.hpp	/^			typedef size_t														size_type;$/;"	t	class:ft::RBT
+size_type	set.hpp	/^			typedef size_t									size_type;$/;"	t	class:ft::set
+size_type	stack.hpp	/^			typedef size_t		size_type;$/;"	t	class:ft::stack
+size_type	vector.hpp	/^			typedef size_t														size_type;$/;"	t	class:ft::vector
+stack	stack.hpp	/^			explicit stack (const container_type& ctnr = container_type()) : _c(ctnr)$/;"	f	class:ft::stack
+stack	stack.hpp	/^	template <class T, class Container = ft::vector<T> > class stack$/;"	c	namespace:ft
+swap	algorithm.hpp	/^		void swap(T& a, T& b)$/;"	f	namespace:ft
+swap	map.hpp	/^			void swap(map& other)$/;"	f	class:ft::map
+swap	map.hpp	/^	void swap (map<Key, T, Compare, Alloc>& lhs, map<Key, T, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+swap	rbt.hpp	/^			void swap(RBT& other)$/;"	f	class:ft::RBT
+swap	rbt.hpp	/^	void swap(RBT<T, Comp, Alloc>& lhs, RBT<T, Comp, Alloc>& rhs)$/;"	f	namespace:ft
+swap	set.hpp	/^			void swap(set& other)$/;"	f	class:ft::set
+swap	set.hpp	/^	void swap (set<Key, Compare, Alloc>& lhs, set<Key, Compare, Alloc>& rhs)$/;"	f	namespace:ft
+swap	vector.hpp	/^			void swap (vector& v)$/;"	f	class:ft::vector
+swap	vector.hpp	/^		void swap (vector<T,Alloc>& lhs, vector<T,Alloc>& rhs)$/;"	f	namespace:ft
+top	stack.hpp	/^			const value_type& top() const	{ return _c.back(); }$/;"	f	class:ft::stack
+top	stack.hpp	/^			value_type& top()				{ return _c.back(); }$/;"	f	class:ft::stack
+true_type	type_traits.hpp	/^	typedef integral_constant<bool, true>	true_type;$/;"	t	namespace:ft
+type	type_traits.hpp	/^		typedef integral_constant<T,v>	type;$/;"	t	struct:ft::integral_constant
+type	type_traits.hpp	/^	struct enable_if<true, T> { typedef T type; };$/;"	t	struct:ft::enable_if
+upper_bound	map.hpp	/^			const_iterator	upper_bound(const key_type& key) const	{ return _m_tree.upper_bound(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+upper_bound	map.hpp	/^			iterator		upper_bound(const key_type& key)		{ return _m_tree.upper_bound(ft::make_pair(key, mapped_type())); }$/;"	f	class:ft::map
+upper_bound	rbt.hpp	/^			iterator upper_bound(const value_type& val) const$/;"	f	class:ft::RBT
+upper_bound	set.hpp	/^			const_iterator upper_bound(const Key& key) const { return _m_tree.upper_bound(key); }$/;"	f	class:ft::set
+upper_bound	set.hpp	/^			iterator upper_bound(const Key& key) { return _m_tree.upper_bound(key); }$/;"	f	class:ft::set
+value	type_traits.hpp	/^		static const T					value = v;$/;"	m	struct:ft::integral_constant
+value	type_traits.hpp	/^	const T integral_constant<T, v>::value;$/;"	m	class:ft::integral_constant
+value_comp	map.hpp	/^			value_compare	value_comp()	const { return value_compare(_m_comp); }$/;"	f	class:ft::map
+value_comp	set.hpp	/^			value_compare value_comp() const { return value_compare(_m_comp); }$/;"	f	class:ft::set
+value_compare	map.hpp	/^					value_compare (Compare c) : comp(c) {}$/;"	f	class:ft::map::value_compare
+value_compare	map.hpp	/^			class value_compare : public ft::binary_function<value_type, value_type, bool>$/;"	c	class:ft::map
+value_compare	rbt.hpp	/^			typedef Comp														value_compare;$/;"	t	class:ft::RBT
+value_compare	set.hpp	/^			typedef Compare									value_compare;$/;"	t	class:ft::set
+value_type	iterator_traits.hpp	/^			typedef T							value_type;$/;"	t	class:ft::iterator_traits
+value_type	iterator_traits.hpp	/^			typedef typename Iterator::value_type			value_type;$/;"	t	class:ft::iterator_traits
+value_type	iterators.hpp	/^			typedef typename iterator<random_access_iterator_tag, T>::value_type		value_type;$/;"	t	class:ft::random_access_iterator
+value_type	iterators.hpp	/^			typedef typename iterator_traits<Iterator>::value_type			value_type;$/;"	t	class:ft::reverse_iterator
+value_type	iterators.hpp	/^		typedef T			value_type;$/;"	t	struct:ft::iterator
+value_type	map.hpp	/^			typedef ft::pair<const key_type, mapped_type>	value_type;$/;"	t	class:ft::map
+value_type	rbt.hpp	/^			typedef	T															value_type;$/;"	t	class:ft::RBT
+value_type	rbt.hpp	/^			typedef T																					value_type;$/;"	t	class:ft::Iterator
+value_type	rbt.hpp	/^			typedef T		value_type;$/;"	t	struct:ft::Node
+value_type	set.hpp	/^			typedef Key										value_type;$/;"	t	class:ft::set
+value_type	stack.hpp	/^			typedef T			value_type;$/;"	t	class:ft::stack
+value_type	type_traits.hpp	/^		typedef T						value_type;$/;"	t	struct:ft::integral_constant
+value_type	vector.hpp	/^			typedef T															value_type;$/;"	t	class:ft::vector
+vector	vector.hpp	/^			explicit vector (const allocator_type& alloc = allocator_type())$/;"	f	class:ft::vector
+vector	vector.hpp	/^			explicit vector (size_type n, const value_type& val = value_type(),$/;"	f	class:ft::vector
+vector	vector.hpp	/^			vector (InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type(),$/;"	f	class:ft::vector
+vector	vector.hpp	/^			vector (const vector& x) : _alloc(x._alloc), _size(x._size), _cap(x._size)$/;"	f	class:ft::vector
+vector	vector.hpp	/^	template <class T, class Alloc = std::allocator<T> > class vector$/;"	c	namespace:ft
+~Iterator	rbt.hpp	/^			virtual ~Iterator() {}$/;"	f	class:ft::Iterator
+~Node	rbt.hpp	/^			virtual ~Node() {}$/;"	f	struct:ft::Node
+~RBT	rbt.hpp	/^			virtual ~RBT()$/;"	f	class:ft::RBT
+~map	map.hpp	/^			virtual ~map() {}$/;"	f	class:ft::map
+~random_access_iterator	iterators.hpp	/^			virtual ~random_access_iterator() {}$/;"	f	class:ft::random_access_iterator
+~set	set.hpp	/^			virtual ~set() {}$/;"	f	class:ft::set
+~vector	vector.hpp	/^			virtual ~vector()$/;"	f	class:ft::vector
